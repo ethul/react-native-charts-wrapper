@@ -184,4 +184,10 @@ class RNPieChartView: RNChartViewBase {
         pieChartDataSet?.entryLabelColor = chart.entryLabelColor
         pieChartDataSet?.entryLabelFont = chart.entryLabelFont
     }
+
+    override func layoutSubviews() {
+      super.layoutSubviews()
+
+      _chart.frame = self.bounds
+    }
 }
